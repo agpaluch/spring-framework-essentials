@@ -22,7 +22,7 @@ import javax.sql.DataSource;
  * - Now the test code should have access to all the beans defined in
  *   the RewardsConfig configuration class
  *
- * TODO-08: Create a new JUnit 5 test class
+ * Create a new JUnit 5 test class
  * - Call it RewardNetworkTests
  * - Create it in the same package this configuration class is located.
  * - Ask for a setUp() method to be generated within your IDE.
@@ -30,7 +30,7 @@ import javax.sql.DataSource;
  * NOTE: The appendices at the bottom of the course Home Page includes
  * a section on creating JUnit tests in an IDE.
  *
- * TODO-09: Make sure the setUp() method in the RewardNetworkTests class is annotated with @BeforeEach.
+ * Make sure the setUp() method in the RewardNetworkTests class is annotated with @BeforeEach.
  * - In the setUp() method, create an application context using
  *   this configuration class - use run(..) static method of
  *   the SpringApplication class
