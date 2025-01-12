@@ -1,13 +1,15 @@
 package rewards;
 
+import config.RewardsConfig;
 import org.springframework.context.annotation.Bean;
 import org.springframework.context.annotation.Configuration;
+import org.springframework.context.annotation.Import;
 import org.springframework.jdbc.datasource.embedded.EmbeddedDatabaseBuilder;
 
 import javax.sql.DataSource;
 
 /**
- * TODO-06: Study this configuration class used for testing
+ * Study this configuration class used for testing
  * - It contains a @Bean method that returns DataSource.
  * - It also creates and populates in-memory HSQL database tables
  *   using two SQL scripts.
@@ -16,7 +18,7 @@ import javax.sql.DataSource;
  *   the '00-rewards-common' project
  * - Do not modify this method.
  *
- * TODO-07: Import your application configuration file (RewardsConfig)
+ * Import your application configuration file (RewardsConfig)
  * - Now the test code should have access to all the beans defined in
  *   the RewardsConfig configuration class
  *
@@ -35,14 +37,14 @@ import javax.sql.DataSource;
  * - Then get the 'rewardNetwork' bean from the application context
  *   and assign it to a private field for use later.
  *
- * TODO-10: We can test the setup by running an empty test.
+ * We can test the setup by running an empty test.
  * - If your IDE automatically generated a @Test method, rename it
  *   testRewardForDining. Delete any code in the method body.
  * - Otherwise add a testRewardForDining method & annotate it with
  *   @Test (make sure the @Test is from org.junit.jupiter.api.Test ).
  * - Run the test. If your setup() is working, you get a green bar.
  *
- * TODO-11: Finally run a real test.
+ * Finally run a real test.
  * - Copy the unit test (the @Test method) from
  *   RewardNetworkImplTests#testRewardForDining() under
  *   rewards.internal test package - we are testing
@@ -52,6 +54,7 @@ import javax.sql.DataSource;
  * - If your test fails - did you miss the import in TO DO 7 above?
  *
  */
+@Import(RewardsConfig.class)
 @Configuration
 public class TestInfrastructureConfig {
 
